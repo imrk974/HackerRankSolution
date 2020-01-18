@@ -1,7 +1,5 @@
 package com.HackerRank.Solution;
 
-import java.util.Arrays;
-
 public class BirthdayCandles {
 
 	static int birthdayCakeCandles(int[] ar) {
