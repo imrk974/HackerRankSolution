@@ -20,18 +20,14 @@ public class ReturnArrayWithproducts {
 		for (int i = 0; i < ar.length; i++) {
 			int prod = 1;
 			for (int j = 0; j < ar.length; j++) {
-
 				if (i != j) {
 					prod *= ar[j];
 				}
-
 				prodArr[i] = prod;
 			}
-
 		}
 
 		return prodArr;
-
 	}
 
 	public static void main(String[] args) {
@@ -39,5 +35,4 @@ public class ReturnArrayWithproducts {
 		System.out.println(Arrays.toString(productArray(ar)));
 
 	}
-
 }
