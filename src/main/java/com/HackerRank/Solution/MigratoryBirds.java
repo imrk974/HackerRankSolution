@@ -19,10 +19,21 @@ public class MigratoryBirds {
 			}
 			
 		}
+		int max = 0;
+		int maxKey = 0;
+		for (Map.Entry<Integer, Integer> entry: map.entrySet()) {
+			if (entry.getValue() > max) {
+				max = entry.getValue();
+				maxKey = entry.getKey();
+			} else if(entry.getValue() == max) {
+				if (entry.getKey() < maxKey) {
+					maxKey = entry.getKey();
+				}
+			}
+			
+		}
 		
-		System.out.println(map);
-		
-		return 0;
+		return maxKey;
     }
 	
 	public static void main(String[] args) {
@@ -31,9 +42,12 @@ public class MigratoryBirds {
 		ar.add(4);
 		ar.add(4);
 		ar.add(4);
-		ar.add(5);
+		ar.add(3);
+		ar.add(3);
+		ar.add(3);
+		ar.add(1);
 		
-		migratoryBirds(ar);
+		System.out.println(migratoryBirds(ar));
 	}
 
 }

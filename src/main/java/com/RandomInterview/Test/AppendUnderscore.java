@@ -1,5 +1,6 @@
 package com.RandomInterview.Test;
 
+
 public class AppendUnderscore {
 
 	private static String append_(String str, int pos) {
@@ -10,7 +11,7 @@ public class AppendUnderscore {
 			return newStr;
 		}
 		pos++;
-
+		
 		append_(newStr, pos + 1);
 
 		return newStr;
