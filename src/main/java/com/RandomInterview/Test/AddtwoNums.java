@@ -16,42 +16,43 @@ Explanation: 342 + 465 = 807.
 package com.RandomInterview.Test;
 
 public class AddtwoNums {
-	
-	
+
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode temp = new ListNode(0);
 		ListNode node = temp;
-		
+		int carry = 0;
 		while (l1 != null && l2 != null) {
-			ListNode tempNode = new ListNode(l1.val+l2.val);
+			int sum = l1.val + l2.val + carry;
+			int last_digit = sum % 10;
+			carry = sum / 10;
+			ListNode tempNode = new ListNode(last_digit);
 			node.next = tempNode;
 			node = node.next;
 			l1 = l1.next;
 			l2 = l2.next;
 		}
-		
+
 		return temp.next;
 	}
 
 	public static void main(String[] args) {
 
-		ListNode l1 = new ListNode(2);
+		ListNode l1 = new ListNode(1);
 		l1.next = new ListNode(4);
 		l1.next.next = new ListNode(3);
-		
-		ListNode l2 = new ListNode(5);
+
+		ListNode l2 = new ListNode(2);
 		l2.next = new ListNode(6);
 		l2.next.next = new ListNode(4);
-		
-		
+
 		AddtwoNums add = new AddtwoNums();
-		ListNode sum  = add.addTwoNumbers(l1, l2);
-		
-		while(sum != null) {
-			System.out.println(sum.val);
+		ListNode sum = add.addTwoNumbers(l1, l2);
+
+		while (sum != null) {
+			System.out.print(sum.val);
 			sum = sum.next;
 		}
-		
+
 	}
 
 }

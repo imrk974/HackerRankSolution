@@ -67,10 +67,10 @@ public class AllPossibleSubstring {
 
 	public static int LCS(String s1, String s2, int m, int n) {
 		int res = 0;
-		int[][] arr = new int[m][n];
-		if (arr[m][n] != 0) {
-			return arr[m][n];
-		}
+//		int[][] arr = new int[m][n];
+//		if (arr[m][n] != 0) {
+//			return arr[m][n];
+//		}
 		if (m == 0 || n == 0) {
 			return 0;
 		}
@@ -90,8 +90,8 @@ public class AllPossibleSubstring {
 		// System.out.println(substring("FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC"));
 		// System.out.println(checkCommonString("WEWOUCUIDGCGTRMEZEPXZFEJWISRSBBSYXAYDFEJJDLEBVHHKS",
 		// "FDAGCXGKCTKWNECHMRXZWMLRYUCOCZHJRRJBOAJOQJZZVUYXIC"));
-		String s1 = "FDAGCXGKCTKASDADASD";
-		String s2 = "WEWOUCUIDGCASFASFASF";
+		String s1 = "acdcadcadc";
+		String s2 = "asdaswdwddw";
 		System.out.println(LCS(s1, s2, s1.length(), s2.length()));
 	}
 

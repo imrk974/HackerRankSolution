@@ -28,25 +28,25 @@ public class Permutations {
 		Collections.sort(list);
 	//	System.out.println(list.toString());
 		return list;
-		//System.out.println(permute("", full));
+	//	System.out.println(permute("", full));
 
 	}
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
-		String[] ar = new String[num];
-		for (int i =0;i < num; i++) {
-			ar[i] = sc.next();
-		}
-		for (int i =0; i < ar.length; i++) {
-			List<String> list = permute(ar[i]);
-			for (int j=0; j < list.size(); j++) {
-				System.out.print(list.get(j) + " ");
-			}
-			System.out.println();
-		}
-		//System.out.println(permute("ABC"));
+//		Scanner sc = new Scanner(System.in);
+//		int num = sc.nextInt();
+//		String[] ar = new String[num];
+//		for (int i =0;i < num; i++) {
+//			ar[i] = sc.next();
+//		}
+//		sc.close();
+//		for (int i =0; i < ar.length; i++) {
+//			List<String> list = permute(ar[i]);
+//			for (int j=0; j < list.size(); j++) {
+//				System.out.print(list.get(j) + " ");
+//			}
+//			System.out.println();
+//		}
+		System.out.println(permute("ABC"));
 	}
-
 }

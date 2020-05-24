@@ -34,25 +34,23 @@ public class CheckSumofTwoNumInArray {
 	}
 
 	private static boolean checkSuminArrayOptimal(int[] arr, int sum) {
-		long startTime = System.nanoTime();
-		long elapsedTime;
 		for (int i = 0; i < arr.length - 1; i++) {
 			int reqnum = sum - arr[i];
-			if (reqnum == arr[i + 1]) {
-				elapsedTime = System.nanoTime() - startTime;
-				System.out.println("Total time taken to execute : " + elapsedTime);
-				return true;
+			int j = i+1;
+			while (j < arr.length) {
+				if (reqnum == arr[j]) {
+					return true;
+				}
 			}
+			
 		}
-		elapsedTime = System.nanoTime() - startTime;
-		System.out.println("Total time taken to execute : " + elapsedTime);
 		return false;
 	}
 
 	public static void main(String[] args) {
 		int[] arr = { 11, 15, 3, 7, 34, 6, 2, 8, 11, 3, 32, 45, 689, 32, 7, 4, 9, 90 };
 
-		System.out.println(checkSuminArray(arr, 99));
+		System.out.println(checkSuminArray(arr, 97));
 
 		System.out.println(checkSuminArrayOptimal(arr, 99));
 

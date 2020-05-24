@@ -14,9 +14,10 @@ public class StringTokens {
 		} else {
 			System.out.println(0);
 		}
+		System.out.println("apple".compareTo("banana"));
 	}
 	
-	
+
 	public static void main(String[] args) {
 		tokenize("                        ");
 
