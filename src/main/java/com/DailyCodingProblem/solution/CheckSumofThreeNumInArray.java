@@ -32,7 +32,7 @@ public class CheckSumofThreeNumInArray {
 		return false;
 	}
 	
-	private static boolean checkThreeSumExistinArrayOptimal(int[] arr, int sum) {
+/*	private static boolean checkThreeSumExistinArrayOptimal(int[] arr, int sum) {
 		long startTime = System.nanoTime();
 		long elapsedTime;
 		for (int i = 0; i < arr.length-1; i++) {
@@ -52,14 +52,14 @@ public class CheckSumofThreeNumInArray {
 		return false;
 	}
 	
-	
+*/	
 	public static void main(String[] args) {
-		
+	//	int[] arr = { 4, 5, 7, 1, 9 };
 		int[] arr = { 11, 15, 3, 7, 34, 6, 2, 8, 11, 3, 32, 45, 689, 32, 7, 50, 80, 73 };
 
-		System.out.println(checkThreeSumExistinArrayOptimal(arr, 203));
+	//	System.out.println(checkThreeSumExistinArrayOptimal(arr, 12));
 		System.out.println("******************************");
-		System.out.println(checkThreeSumExistinArray(arr, 103));
+		System.out.println(checkThreeSumExistinArray(arr, 12));
 		
 		
 

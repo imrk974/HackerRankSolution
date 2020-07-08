@@ -1,7 +1,9 @@
 package com.revision;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CheckTwoSum {
 
@@ -22,7 +24,22 @@ public class CheckTwoSum {
 
 		return false;
 	}
-
+	
+	//return the index of element which sums to the given number
+	public static int[] checkSumUsingmap(int[] ar, int sum) throws IllegalAccessException {
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		
+		for (int i =0; i < ar.length; i++) {
+			int comp = sum - ar[i];
+			if(map.containsKey(comp)) {
+				return new int[] {map.get(comp), i};
+			}
+			map.put(ar[i], i);
+		}
+		
+		throw new IllegalAccessException("no Combination");
+	}
+	
 	// second approach
 
 	public static boolean checksumofTwo(int[] ar, int num) {
